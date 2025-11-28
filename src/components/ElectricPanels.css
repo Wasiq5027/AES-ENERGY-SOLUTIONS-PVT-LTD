@@ -1,0 +1,439 @@
+/* Electric Panels Section */
+.electric-panels-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.electric-panels-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
+}
+
+.electric-panels-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Content Layout */
+.electric-panels-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left Side - Text */
+.electric-panels-text {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+  animation-delay: 0.2s;
+  padding-left: 2rem;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title-badge {
+  position: relative;
+  display: inline-block;
+  padding: 3rem 4.5rem;
+  padding-bottom: 5rem;
+  border-radius: 30px;
+  margin-bottom: 2.5rem;
+  z-index: 1;
+}
+
+/* Layered background shapes */
+.title-badge::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  background: #9ca3af;
+  border-radius: 30px;
+  z-index: -2;
+}
+
+.title-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 30px;
+  z-index: -1;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+}
+
+.electric-panels-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.electric-panels-intro {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+  text-align: justify;
+}
+
+/* Features */
+.electric-panels-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-item {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #3b82f6;
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.feature-item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.feature-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+}
+
+.feature-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.feature-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              padding-top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+  opacity: 0;
+  padding-top: 0;
+}
+
+.feature-item.active .feature-content {
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 0.75rem;
+}
+
+.feature-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #6b7280;
+  margin: 0;
+  text-align: justify;
+}
+
+.feature-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.feature-toggle-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  transform: scale(1.1);
+}
+
+.feature-item .toggle-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-item.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Right Side - Images and Types */
+.electric-panels-right {
+  opacity: 0;
+  animation: slideInRight 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.electric-panels-images {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.electric-panel-image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.electric-panel-image:hover {
+  transform: scale(1.05);
+}
+
+/* Panel Types List */
+.panel-types-list {
+  background: white;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.panel-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.panel-list-header:hover {
+  background: #f0f9ff;
+}
+
+.panel-list-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.panel-list-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.panel-list-toggle-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  transform: scale(1.1);
+}
+
+.toggle-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-types-list.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.panel-list-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 2rem;
+}
+
+.panel-types-list.active .panel-list-content {
+  max-height: 600px;
+  padding: 1rem 2rem 1.5rem 2rem;
+}
+
+.panel-type-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.panel-type-item:last-child {
+  border-bottom: none;
+}
+
+.panel-type-item:hover {
+  padding-left: 0.5rem;
+  background: #f0f9ff;
+  border-radius: 8px;
+}
+
+.panel-type-bullet {
+  color: #3b82f6;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.panel-type-text {
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .electric-panels-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .electric-panels-text {
+    order: 1;
+    padding-left: 0;
+  }
+
+  .electric-panels-right {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .electric-panels-section {
+    padding: 4rem 2rem;
+  }
+
+  .electric-panels-container {
+    padding: 0 1.5rem;
+  }
+
+  .electric-panels-content {
+    gap: 2.5rem;
+  }
+
+  .electric-panels-text {
+    text-align: center;
+  }
+
+  .title-badge {
+    padding: 1.5rem 2rem;
+    padding-bottom: 3rem;
+    display: block;
+    margin: 0 auto 2rem auto;
+  }
+
+  .title-badge::before {
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .electric-panels-title {
+    font-size: 2.2rem;
+  }
+
+  .electric-panels-intro {
+    font-size: 0.95rem;
+  }
+
+
+
+  .electric-panel-image {
+    height: 180px;
+  }
+
+  .electric-panels-features {
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    padding: 1.2rem;
+  }
+
+  .feature-title {
+    font-size: 1.15rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+  }
+
+  .panel-types-list {
+    padding: 1.5rem;
+  }
+
+  .panel-type-text {
+    font-size: 0.9rem;
+  }
+}

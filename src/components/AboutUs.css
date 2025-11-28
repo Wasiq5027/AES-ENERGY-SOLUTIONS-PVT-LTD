@@ -1,0 +1,52 @@
+.about-us-section {
+  background: white;
+  padding: 5rem 0;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+/* Logo and Tagline */
+.about-header {
+  margin-bottom: 3rem;
+}
+
+.about-logo {
+  height: 100px;
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
+.about-tagline {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.tagline-highlight {
+  color: #2d5a8c;
+  font-weight: 600;
+}
+
+/* Description Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.about-paragraph {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: black;
+  margin: 0;
+}

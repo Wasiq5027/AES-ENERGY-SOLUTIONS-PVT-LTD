@@ -1,0 +1,264 @@
+.visit-us-section {
+  background: white;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.visit-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/4x/4x/newpattern.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.visit-us-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.visit-us-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 3rem;
+}
+
+.visit-us-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  background-image: 
+    linear-gradient(white, white),
+    linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa, #3b82f6, #1e3a8a);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Map Section */
+.map-section {
+  position: relative;
+  height: 350px;
+  background: var(--gray-100);
+}
+
+.map-section iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.2s;
+  background: white;
+  color: #374151;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #2d5a8c;
+  box-shadow: 0 0 0 3px rgba(45, 90, 140, 0.1);
+}
+
+.form-input.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit-btn {
+  background: #2d5a8c;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(45, 90, 140, 0.3);
+  align-self: flex-start;
+  width: 100%;
+}
+
+.form-submit-btn:hover {
+  background: #1e4a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 90, 140, 0.4);
+}
+
+.form-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .visit-us-section {
+    padding: 3rem 0;
+  }
+
+  .visit-us-container {
+    padding: 0 2rem;
+  }
+
+  .visit-us-title {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .visit-us-content {
+    grid-template-columns: 1fr;
+  }
+
+  .map-section {
+    height: 200px;
+  }
+
+  .contact-form-section {
+    padding: 2rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .visit-us-section {
+    padding: 2rem 0;
+  }
+
+  .visit-us-container {
+    padding: 0 1.5rem;
+  }
+
+  .visit-us-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .visit-us-content {
+    gap: 0;
+  }
+
+  .map-section {
+    height: 200px;
+  }
+
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .form-submit-btn {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .visit-us-section {
+    padding: 1.5rem 0;
+  }
+
+  .visit-us-container {
+    padding: 0 1rem;
+  }
+
+  .visit-us-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .map-section {
+    height: 180px;
+  }
+
+  .contact-form-section {
+    padding: 1.25rem;
+  }
+
+  .contact-form {
+    gap: 1rem;
+  }
+
+  .form-row {
+    gap: 0.875rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.7rem 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  .form-textarea {
+    min-height: 60px;
+  }
+
+  .form-submit-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

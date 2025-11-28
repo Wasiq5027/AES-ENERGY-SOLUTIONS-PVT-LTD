@@ -1,0 +1,161 @@
+.achievements-section-new {
+  background: linear-gradient(135deg, #2b5797 0%, #254a82 50%, #1e4175 100%);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  background-image: url('/assets/4x/Asset 7@4x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 1;
+  z-index: 1;
+  filter:contrast(1.2);
+}
+
+.achievements-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.achievements-geometric-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.achievements-container-new {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.achievements-title-new {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+.stats-grid-new {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-card-new {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 
+    8px 8px 20px rgba(0, 0, 0, 0.3),
+    12px 12px 30px rgba(0, 0, 0, 0.2),
+    4px 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.stat-card-new:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    10px 10px 25px rgba(0, 0, 0, 0.35),
+    15px 15px 40px rgba(0, 0, 0, 0.25),
+    5px 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number-new {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  color: var(--primary-blue);
+  letter-spacing: -0.02em;
+}
+
+.stat-label-new {
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--primary-blue);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .achievements-container-new {
+    padding: 0 2rem;
+  }
+
+  .achievements-title-new {
+    font-size: 2rem;
+  }
+
+  .stats-grid-new {
+    gap: 1.5rem;
+  }
+
+  .stat-number-new {
+    font-size: 3.5rem;
+  }
+
+  .stat-label-new {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-section-new {
+    padding: 3rem 0;
+  }
+
+  .achievements-container-new {
+    padding: 0 1.5rem;
+  }
+
+  .achievements-title-new {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-card-new {
+    padding: 2rem 1.5rem;
+  }
+
+  .stat-number-new {
+    font-size: 3rem;
+  }
+
+  .stat-label-new {
+    font-size: 0.95rem;
+  }
+}

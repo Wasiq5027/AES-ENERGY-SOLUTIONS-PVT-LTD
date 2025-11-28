@@ -1,0 +1,352 @@
+.experience-section {
+  background: white;
+  padding: 4rem 0;
+}
+
+.experience-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.experiencetitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.title-blue {
+  color: var(--primary-blue);
+}
+
+.title-gray {
+  color: #5b626e;
+}
+
+.experiencesubtitle {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: black;
+  max-width: 1000px;
+  margin: 0 auto 1rem;
+}
+
+.products-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 3rem;
+  max-width: 100%;
+}
+
+.product-item {
+  flex: 0 0 auto;
+  max-width: 40%;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Generator (Closed/White) */
+.generator-image {
+  width: 85%;
+  height: 75%;
+  background: linear-gradient(135deg, #e8e8e8 0%, #ffffff 100%);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px solid #d4d4d4;
+}
+
+.generator-image::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  background: #1a1a1a;
+  top: 35%;
+  left: 15%;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.generator-image::after {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  background: radial-gradient(circle, #d32f2f 30%, #666 100%);
+  top: 25%;
+  left: 22%;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+}
+
+/* Open Generator (Blue/Industrial) */
+.open-generator-image {
+  width: 90%;
+  height: 80%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f1419 100%);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.open-generator-image::before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  background: linear-gradient(to bottom, #2563eb 0%, #1e3a8a 100%);
+  top: 25%;
+  left: 30%;
+  border-radius: 6px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.open-generator-image::after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 35%;
+  background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+  top: 30%;
+  right: 15%;
+  border-radius: 4px;
+  border: 2px solid #475569;
+}
+
+/* Panel (White with controls) */
+.panel-image {
+  width: 85%;
+  height: 75%;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  position: relative;
+  border: 3px solid #adb5bd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px;
+}
+
+.panel-image::before {
+  content: '';
+  background: linear-gradient(to bottom, #10b981 0%, #059669 100%);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.panel-image::after {
+  content: '';
+  background: linear-gradient(to bottom, #ef4444 0%, #dc2626 100%);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Control Panel (Advanced) */
+.control-panel-image {
+  width: 85%;
+  height: 75%;
+  background: linear-gradient(135deg, #f0f0f0 0%, #d4d4d4 100%);
+  border-radius: 8px;
+  position: relative;
+  border: 3px solid #999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.control-panel-image::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 40%;
+  background: linear-gradient(to bottom, #1e293b 0%, #0f172a 100%);
+  top: 15%;
+  left: 15%;
+  border-radius: 4px;
+  border: 2px solid #334155;
+}
+
+.control-panel-image::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 30%;
+  background: repeating-linear-gradient(
+    90deg,
+    #ef4444 0px,
+    #ef4444 8px,
+    transparent 8px,
+    transparent 16px,
+    #22c55e 16px,
+    #22c55e 24px,
+    transparent 24px,
+    transparent 32px,
+    #eab308 32px,
+    #eab308 40px,
+    transparent 40px,
+    transparent 48px
+  );
+  bottom: 15%;
+  left: 15%;
+  border-radius: 4px;
+}
+
+.products-cta {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+.products-cta:hover {
+  background: #4b5563;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 114, 128, 0.4);
+}
+
+.products-cta:active {
+  transform: translateY(0);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .experience-section {
+    padding: 3rem 0;
+  }
+
+  .experience-container {
+    padding: 0 2rem;
+  }
+
+  .experiencetitle {
+    font-size: 3rem;
+  }
+
+  .experiencesubtitle {
+    font-size: 1.25rem;
+  }
+
+  .products-showcase {
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .product-item {
+    max-width: 45%;
+  }
+
+  .products-cta {
+    padding: 0.875rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 2rem 0;
+  }
+
+  .experience-container {
+    padding: 0 1.5rem;
+  }
+
+  .experiencetitle {
+    font-size: 3rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .experiencesubtitle {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0.875rem;
+  }
+
+  .products-showcase {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-item {
+    max-width: 70%;
+  }
+
+  .generator-image,
+  .panel-image,
+  .control-panel-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .open-generator-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .products-cta {
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 1.5rem 0;
+  }
+
+  .experience-container {
+    padding: 0 1rem;
+  }
+
+  .experiencetitle {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .experiencesubtitle {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .products-showcase {
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-item {
+    max-width: 85%;
+  }
+
+  .generator-image,
+  .panel-image,
+  .control-panel-image {
+    height: 160px;
+  }
+
+  .open-generator-image {
+    height: 180px;
+  }
+
+  .products-cta {
+    padding: 0.7rem 1.75rem;
+    font-size: 0.9rem;
+  }
+}

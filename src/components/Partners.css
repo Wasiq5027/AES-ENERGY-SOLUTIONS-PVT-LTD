@@ -1,0 +1,344 @@
+/* Partners Page */
+.partners-page {
+  padding: 5rem 0 0 0;
+  position: relative;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+  min-height: 100vh;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.partners-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.partners-main-title span {
+  color: black;
+}
+
+.partners-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.partners-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Partner Section */
+.partner-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.05), transparent);
+  transition: left 0.8s ease;
+}
+
+.partner-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.partner-section.visible::before {
+  left: 100%;
+}
+
+.partner-section.even .partner-content {
+  order: 1;
+}
+
+.partner-section.even .partner-image-wrapper {
+  order: 2;
+}
+
+.partner-section.odd .partner-content {
+  order: 2;
+}
+
+.partner-section.odd .partner-image-wrapper {
+  order: 1;
+}
+
+.partner-section:last-child {
+  margin-bottom: 3rem;
+}
+
+.partner-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Content Side */
+.partner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.partner-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 80px;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.partner-logo-wrapper:hover {
+  border-color: #1e3a8a;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+  transform: scale(1.02);
+}
+
+.partner-logo {
+  max-width: 180px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo-wrapper:hover .partner-logo {
+  transform: scale(1.05);
+}
+
+.partner-description {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #374151;
+  text-align: justify;
+  margin: 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.partner-description::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #1e3a8a, #3b82f6);
+  border-radius: 2px;
+}
+
+/* Image Side */
+.partner-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  transition: all 0.4s ease;
+}
+
+.partner-image-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(59, 130, 246, 0.05));
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.partner-image-wrapper:hover .partner-image-background {
+  width: 95%;
+  height: 95%;
+  filter: blur(50px);
+}
+
+.partner-image {
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.partner-section:hover .partner-image {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .partners-main-title {
+    font-size: 2.5rem;
+  }
+
+  .partners-container {
+    padding: 3rem 2rem;
+  }
+
+  .partner-section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .partner-logo {
+    max-width: 200px;
+    max-height: 80px;
+  }
+
+  .partner-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-page {
+    padding: 3rem 0 0 0;
+  }
+
+  .partners-header {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .partners-main-title {
+    font-size: 2rem;
+  }
+
+  .partners-subtitle {
+    font-size: 1rem;
+  }
+
+  .partners-container {
+    padding: 0 1rem;
+  }
+
+  .partner-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+  }
+
+  .partner-section.even .partner-content,
+  .partner-section.odd .partner-content {
+    order: 1;
+  }
+
+  .partner-section.even .partner-image-wrapper,
+  .partner-section.odd .partner-image-wrapper {
+    order: 2;
+  }
+
+  .partner-content {
+    gap: 1.5rem;
+  }
+
+  .partner-logo-wrapper {
+    padding: 0.75rem;
+    min-height: 60px;
+  }
+
+  .partner-logo {
+    max-width: 150px;
+    max-height: 60px;
+  }
+
+  .partner-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .partner-image-wrapper {
+    padding: 1rem;
+    max-height: 200px;
+  }
+
+  .partner-image {
+    max-height: 180px;
+    width: auto;
+  }
+
+  .partner-section:hover {
+    transform: translateY(0);
+  }
+
+  .partner-section:hover .partner-image {
+    transform: scale(1.02);
+  }
+}

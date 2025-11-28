@@ -1,0 +1,167 @@
+.contact-us-section {
+  background-color: var(--primary-blue);
+  padding: 4rem 0;
+}
+
+.contact-us-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.contact-us-outer-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.contact-us-card {
+  border: 3px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 3rem 3rem;
+  text-align: center;
+}
+
+.contact-us-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.contact-us-subtitle {
+  font-size: 1.25rem;
+  color: #374151;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-us-subtitle strong,
+.contact-us-subtitle b {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact-btn .btn-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.contact-btn:hover .btn-icon {
+  transform: scale(1.1);
+}
+
+.contact-btn:active {
+  transform: translateY(-1px);
+}
+
+.call-btn {
+  background: #4b5563;
+  color: white;
+}
+
+.call-btn:hover {
+  background: #374151;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: #20bd5a;
+}
+
+.email-btn {
+  background: #2d5a8c;
+  color: white;
+}
+
+.email-btn:hover {
+  background: #1e4a7a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-us-section {
+    padding: 3rem 0;
+  }
+
+  .contact-us-container {
+    padding: 0 1.5rem;
+  }
+
+  .contact-us-outer-card {
+    padding: 1.5rem;
+  }
+
+  .contact-us-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-us-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-us-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us-title {
+    font-size: 2rem;
+  }
+
+  .contact-us-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact-btn {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+  }
+}

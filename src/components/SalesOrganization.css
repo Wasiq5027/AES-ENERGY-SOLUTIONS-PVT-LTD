@@ -1,0 +1,113 @@
+.sales-organization-section {
+  background: white;
+  padding: 5rem 5rem;
+}
+
+.sales-organization-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sales-organization-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+.sales-org-title span {
+  color: black;
+}
+
+.sales-cycle,
+.organizational-structure {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sales-cycle .sales-org-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.organizational-structure .sales-org-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #2d5a8c;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.sales-cycle-image {
+  width: 45%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transform: scale(1.15);
+}
+
+.organizational-structure-image {
+  width: 65%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transform: scale(1.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sales-organization-content {
+    gap: 4rem;
+  }
+
+  .sales-cycle .sales-org-title,
+  .organizational-structure .sales-org-title {
+    font-size: 2.5rem;
+  }
+
+  .sales-cycle-image {
+    transform: scale(1.1);
+     width: 95%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  }
+
+  .organizational-structure-image {
+    transform: scale(1.1);
+     width: 95%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .sales-organization-section {
+    padding: 3rem 0;
+  }
+
+  .sales-organization-container {
+    padding: 0 1.5rem;
+  }
+
+  .sales-cycle .sales-org-title,
+  .organizational-structure .sales-org-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sales-cycle-image {
+    transform: scale(1.05);
+  }
+
+  .organizational-structure-image {
+    transform: scale(1.05);
+  }
+}
