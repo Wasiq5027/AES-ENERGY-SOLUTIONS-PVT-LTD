@@ -2,7 +2,7 @@
 
 A modern, responsive corporate website for AESESL Private Limited, built with React and Vite. AESESL is a leading provider of innovative energy and infrastructure solutions, specializing in generator supply, electric panels, lift systems, and advanced HVAC/VRV systems.
 
-[![AESESL](fullpage_snapshot_aesesl_com_2026-10-04-15-39-54.png
+![AESESL](fullpage_snapshot_aesesl_com_2026-10-04-15-39-54.png
 )
 
 ## 🏢 About AESESL
